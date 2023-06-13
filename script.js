@@ -1,25 +1,38 @@
-function insert(number){
-    var num = document.getElementById('result').innerHTML;
-    document.getElementById('result').innerHTML = num + number ;
+let resultado = document.querySelector('.resultado');
 
+function insert(valor){
+
+    let ultimoValorDigitado = resultado.innerHTML[resultado.innerHTML.length-1];
+
+    if(ultimoValorDigitado && !Number(ultimoValorDigitado) && !Number(valor) && ultimoValorDigitado != 0 && valor != 0 ) 
+    {
+        backspace();
+    }
+    
+    resultado.innerHTML += valor;
 }
 
+
 function clean(){
-    document.getElementById('result').innerHTML = '';
+    resultado.innerHTML = ' ';
 }
 
 function backspace(){
-    var resultado = document.getElementById('result').innerHTML;
-    document.getElementById('result').innerHTML = resultado.substring (0, resultado.length -1);
+    if(resultado.textContent){
+        resultado.innerHTML = resultado.innerHTML.slice(0, -1)
+    }
 }
 
 function calc(){
-    var resultado = document.getElementById('result').innerHTML;
-    if(resultado){
-    document.getElementById('result').innerHTML = eval(resultado);
-    }
-    else{
-        document.getElementById('result').innerHTML="Favor inserir um numero";
-    }
+    
+    try{
+        resultado.innerHTML = eval(resultado.innerHTML);
 
+    } catch(error){
+        alert("Algo deu errado. Tente novamente");
+        
+
+    }
 }
+
+

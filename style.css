@@ -5,17 +5,20 @@
     font-family: 'Urbanist', sans-serif; 
 }
 
-header{
-    margin: 3px;
-    padding: 1%;
-    border-radius: 10px;
-    color: blueviolet;
-    text-align: center;
-    }
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #ccc;
 
- .calculator{
-    width: 40%;
-    height: 65%;
+}
+
+
+ .calculator{ 
+    width: 80vmin;
+    height: 75vmin;
     position: absolute;
     background-color: blueviolet;
     top: 55%;
@@ -27,7 +30,7 @@ header{
 }
 button{
     width: 120px;
-    height: 50px;
+    height: 65px;
     font-size: 1.5625rem;
     cursor: pointer;
     background-color:greenyellow ;
@@ -44,7 +47,7 @@ button:hover{
 #result{
     background-color: white;
     width: 31.25rem;
-    height: 4.375rem;
+    height: 90px;
     margin: 0.3125rem;
     font-size: 1.5625rem;
     text-align: right;
@@ -53,7 +56,7 @@ button:hover{
 }
 
 .buttonEqual{
-    height: 110px;
+    height: 130px;
 }
 
 
